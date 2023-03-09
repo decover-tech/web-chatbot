@@ -1,5 +1,5 @@
 {
-  "name": "embed-chatbot",
+  "name": "decover-web-chatbot",
   "version": "1.0.0",
   "description": "Component library for DecoverAI's chatbot",
   "main": "dist/cjs/index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/decover-tech/embed-chatbot.git"
+    "url": "https://github.com/decover-tech/embed-chatbot.git"
   },
   "author": "Ravi Tandon",
   "license": "MIT",
@@ -23,9 +23,12 @@
   },
   "homepage": "https://github.com/decover-tech/embed-chatbot#readme",
   "devDependencies": {
+    "@ant-design/icons": "^5.0.1",
     "@types/node": "^18.14.6",
     "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11"
+    "@types/react-dom": "^18.0.11",
+    "@types/styled-components": "^5.1.26",
+    "styled-components": "^5.3.8"
   },
   "peerDependencies": {
     "react": "^18.0.28",
