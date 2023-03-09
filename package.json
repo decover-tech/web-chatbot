@@ -1,6 +1,6 @@
 {
   "name": "decover-web-chatbot",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "Component library for DecoverAI's chatbot",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
