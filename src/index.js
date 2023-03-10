@@ -8,6 +8,16 @@ class LikeButton extends React.Component {
     this.state = { liked: false };
   }
 
+  // Write a function that opens a new iframe and loads the URL when the button is clicked
+  handleClick() {
+    // Create a new iframe
+    const iframe = document.createElement('iframe');
+    // Set the iframe's src to the URL
+    iframe.src = 'https://www.google.com';
+    // Append the iframe to the body
+    document.body.appendChild(iframe);
+  }
+
   render() {
     if (this.state.liked) {
       return 'You liked this.';
@@ -15,7 +25,7 @@ class LikeButton extends React.Component {
 
     return e(
       'button',
-      { onClick: () => this.setState({ liked: true }) },
+      { onClick: () => this.handleClick() },
       'Like'
     );
   }
