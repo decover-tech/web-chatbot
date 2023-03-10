@@ -76,7 +76,7 @@ class ShareButton extends React.Component {
     iframe.style.marginBottom = '10px';
     
     // Set the iframe's src to the URL.
-    iframe.src = 'http://localhost:3000/chatbot/' + this.decoverId;
+    iframe.src = `https://app.decover.ai/chatbot/${this.decoverId}`;
 
     // We add the iframe to the DOM just above the button element.
     // Get the button element
