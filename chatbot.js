@@ -2,6 +2,14 @@
 
 const e = React.createElement;
 
+// Returns the decoverId passed as a script parameter.
+function getDecoverIdFromParams() {
+  var scripts = document.getElementsByTagName('script');
+  var lastScript = scripts[scripts.length-1];
+  var scriptName = lastScript;
+  return scriptName.getAttribute('decoverId');
+}
+
 // Icon used for the chat-button.
 const CHAT_BUTTON_ICON = `
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,6 +47,7 @@ class ShareButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = { chatBoxOpen: false };
+    this.decoverId = getDecoverIdFromParams();    
   }
 
   // Write a function that opens a new iframe and loads the URL when the button is clicked.
@@ -67,7 +76,7 @@ class ShareButton extends React.Component {
     iframe.style.marginBottom = '10px';
     
     // Set the iframe's src to the URL.
-    iframe.src = 'http://localhost:3000/chatbot/dec1234/';
+    iframe.src = 'http://localhost:3000/chatbot/' + this.decoverId;
 
     // We add the iframe to the DOM just above the button element.
     // Get the button element
@@ -94,7 +103,6 @@ class ShareButton extends React.Component {
   }
 }
 
-// Adding the chatbutton to the DOM.
 const domContainer = document.querySelector('#like_button_container');
 const root = ReactDOM.createRoot(domContainer);
 root.render(e(ShareButton));
