@@ -1,6 +1,6 @@
 {
   "name": "decover-web-chatbot",
-  "version": "0.0.2",
+  "version": "1.0.6",
   "description": "Component library for DecoverAI's chatbot",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -14,24 +14,33 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/decover-tech/embed-chatbot.git"
+    "url": "https://github.com/decover-tech/webapp-chatbot"
   },
   "author": "Ravi Tandon",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/decover-tech/embed-chatbot/issues"
+    "url": "https://github.com/decover-tech/webapp-chatbot/issues"
   },
-  "homepage": "https://github.com/decover-tech/embed-chatbot#readme",
-  "devDependencies": {
-    "@ant-design/icons": "^5.0.1",
+  "homepage": "https://github.com/decover-tech/webapp-chatbot#readme",
+  "devDependencies": {    
     "@types/node": "^18.14.6",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "@types/styled-components": "^5.1.26",
-    "styled-components": "^5.3.8"
+    "@types/styled-components": "^5.1.26"    
   },
   "peerDependencies": {
     "react": "^18.0.28",
     "react-dom": "^18.0.11"
+  },
+  "dependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-stage-0": "^7.8.3",
+    "babel-loader": "^9.1.2",
+    "webpack": "^5.76.0",
+    "webpack-cli": "^5.0.1",
+    "styled-components": "^5.3.8",
+    "@ant-design/icons": "^5.0.1"
   }
 }

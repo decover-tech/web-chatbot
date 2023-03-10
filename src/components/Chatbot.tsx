@@ -11,7 +11,7 @@ type MessageType = {
     isSentByBot: boolean;
 };
 
-const Chatbot: React.FC<ChatbotProps> = ({ decoverId }) => {
+export const Chatbot: React.FC<ChatbotProps> = ({ decoverId }) => {
     const endpoint = 'https://app-api.decoverapp.com/api/v1/chat';
     const messagesEndRef: React.MutableRefObject<HTMLDivElement | null> = useRef<null | HTMLDivElement>(null);
     const [newMessage, setNewMessage] = useState<MessageType>({
@@ -203,5 +203,3 @@ const MessageSubmitButton = styled.button`
     background-color: white;
     cursor: pointer;
 `;
-
-export default Chatbot;
