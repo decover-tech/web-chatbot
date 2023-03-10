@@ -12,8 +12,14 @@ class LikeButton extends React.Component {
   handleClick() {
     // Create a new iframe
     const iframe = document.createElement('iframe');
+    
     // Set the iframe's src to the URL
     iframe.src = 'https://www.google.com';
+    
+    // Add max-width (400px) and max-height (700px) to the iframe
+    iframe.style.maxWidth = '400px';
+    iframe.style.maxHeight = '700px';
+
     // Append the iframe to the body
     document.body.appendChild(iframe);
   }
