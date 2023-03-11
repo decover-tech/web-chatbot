@@ -55,8 +55,8 @@ class ShareButton extends React.Component {
   handleClick() {
     if (this.state.chatBoxOpen) {
       // Close the iframe if it is already open.
-      document.getElementById('like_button_container').children[0].remove();
-      document.getElementById('like_button_container').style.display = 'block';
+      document.getElementById('chat_button_container').children[0].remove();
+      document.getElementById('chat_button_container').style.display = 'block';
       this.setState({ chatBoxOpen: false });
       buttonElement.children[0].innerHTML = CHAT_BUTTON_ICON;
       return;
@@ -76,11 +76,11 @@ class ShareButton extends React.Component {
     iframe.style.marginBottom = '10px';
     
     // Set the iframe's src to the URL.
-    iframe.src = 'http://localhost:3000/chatbot/' + this.decoverId;
+    iframe.src = 'https://staging.decover.ai/chatbot/' + this.decoverId;
 
     // We add the iframe to the DOM just above the button element.
     // Get the button element
-    const buttonElement = document.getElementById('like_button_container').children[0];
+    const buttonElement = document.getElementById('chat_button_container').children[0];
 
     // Get the parent element of the button element
     const parentElement = buttonElement.parentElement;
@@ -90,10 +90,10 @@ class ShareButton extends React.Component {
 
     // We want the iframe and the button to be below each other as a flexbox.
     // So we set the display of the button to flex.
-    document.getElementById('like_button_container').style.display = 'flex';
-    document.getElementById('like_button_container').style.flexDirection = 'column';
+    document.getElementById('chat_button_container').style.display = 'flex';
+    document.getElementById('chat_button_container').style.flexDirection = 'column';
     // Ensure that the children are aligned to the right.
-    document.getElementById('like_button_container').style.alignItems = 'flex-end';
+    document.getElementById('chat_button_container').style.alignItems = 'flex-end';
 
     // Change the icon of the button to a close icon.
     buttonElement.children[0].innerHTML = CHAT_BUTTON_ICON_CLOSE;
@@ -105,6 +105,6 @@ class ShareButton extends React.Component {
   }
 }
 
-const domContainer = document.querySelector('#like_button_container');
+const domContainer = document.querySelector('#chat_button_container');
 const root = ReactDOM.createRoot(domContainer);
 root.render(e(ShareButton));
